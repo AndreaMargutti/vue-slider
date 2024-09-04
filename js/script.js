@@ -35,11 +35,19 @@ createApp({
     },
     methods: {
         nextBtn() {
-            this.activeIndex++;
+            if (this.activeIndex === this.imgList.lenght - 1) {
+                this.activeIndex = 0;
+            } else {
+                this.activeIndex++;
+            };
         },
 
         prevBtn() {
-            this.activeIndex--;
+            if (this.activeIndex === 0) {
+                this.activeIndex = this.imgList.lenght - 1;
+            } else {
+                this.activeIndex--;
+            };
         }
     }
 }).mount('#app')
