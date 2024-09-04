@@ -20,7 +20,7 @@
             <div class="row justify-content-center py-3">
                 <div class="col">
                     <div class="card justify-content-center">
-                        <img src="" class="card-img-top">
+                        <img :src="imgList[activeIndex].image" class="card-img-top">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -32,8 +32,8 @@
             <div class="row justify-content-center py-3">
                 <div class="col">
                     <div id="slider">
-                        <button class="btn btn-lg btn-primary">Precedente</button>
-                        <button class="btn btn-lg btn-primary">Prossima</button>
+                        <button class="btn btn-lg btn-primary" @click="prevBtn()">Precedente</button>
+                        <button class="btn btn-lg btn-primary" @click="nextBtn()">Prossima</button>
                     </div>
                 </div>
             </div>
