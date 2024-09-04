@@ -34,19 +34,19 @@ createApp({
         }
     },
     methods: {
-        nextBtn() {
-            if (this.activeIndex === this.imgList.lenght - 1) {
-                this.activeIndex = 0;
+        prevBtn() {
+            if (this.activeIndex === 0) {
+                this.activeIndex = this.imgList.length - 1;
             } else {
-                this.activeIndex++;
+                this.activeIndex--;
             };
         },
 
-        prevBtn() {
-            if (this.activeIndex === 0) {
-                this.activeIndex = this.imgList.lenght - 1;
+        nextBtn() {
+            if (this.activeIndex === this.imgList.length - 1) {
+                this.activeIndex = 0;
             } else {
-                this.activeIndex--;
+                this.activeIndex++;
             };
         }
     }
